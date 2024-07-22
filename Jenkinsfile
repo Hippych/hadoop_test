@@ -9,7 +9,7 @@ pipeline {
         CORE_SITE = "'<property><name>fs.defaultFS</name><value>hdfs://localhost:9000</value></property><property><name>hadoop.http.staticuser.user</name><value>hadoop</value></property></configuration>'"
         HDFS_SITE = "'<property><name>dfs.replication</name><value>1</value></property><property><name>dfs.name.dir</name><value>file:///hadoop/hdfs/namenode</value></property><property><name>dfs.data.dir</name><value>file:///hadoop/hdfs/datanode</value></property><property><name>dfs.permissions</name><value>true</value></property></configuration>'"
         YARN_SITE = "'<property><name>yarn.nodemanager.aux-services</name><value>mapreduce_shuffle</value></property><property><name>yarn.nodemanager.env-whitelist</name><value>JAVA_HOME,HADOOP_COMMON_HOME,HADOOP_HDFS_HOME,HADOOP_CONF_DIR,CLASSPATH_PREPEND_DISTCACHE,HADOOP_YARN_HOME,HADOOP_HOME,PATH,LANG,TZ,HADOOP_MAPRED_HOME</value></property></configuration>'"
-        MAPRED = "'<property><name>mapreduce.framework.name</name><value>yarn</value></property><property><name>mapreduce.application.classpath</name><value>$HADOOP_MAPRED_HOME/share/hadoop/mapreduce/*:$HADOOP_MAPRED_HOME/share/hadoop/mapreduce/lib/*</value></property></configuration>'"
+        MAPRED = "'<property><name>mapreduce.framework.name</name><value>yarn</value></property><property><name>mapreduce.application.classpath</name><value>\$HADOOP_MAPRED_HOME/share/hadoop/mapreduce/*:\$HADOOP_MAPRED_HOME/share/hadoop/mapreduce/lib/*</value></property></configuration>'"
         HADOOP_ENV = "'export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64'"
         SED_XML = "'</configuration>'"
 
