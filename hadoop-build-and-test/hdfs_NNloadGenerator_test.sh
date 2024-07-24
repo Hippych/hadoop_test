@@ -27,5 +27,5 @@ fi
         -root /benchmarks/testLoadSpace \
         -elapsedTime 120 \
 && \
-"$HADOOP_HOME"/bin/hdfs dfs -rm -r /benchmarks/testLoadSpace \
+"$HADOOP_HOME"/bin/hdfs dfs -rm -r /benchmarks/testLoadSpace
 /bin/rm -rf "$HOME"/benchmarks/testLoadSpace
